@@ -10,9 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Elliott Lawson",
-            "email": "elliott.lawson@outlook.com",
-            "role": "Developer"
+            "name": "Elliott Lawson"
         }
     ],
     "require": {
@@ -35,7 +33,6 @@
     "autoload": {
         "psr-4": {
             "ElliottLawson\\NovaGenie\\": "src",
-            "ElliottLawson\\NovaGenie\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
@@ -53,16 +50,6 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ElliottLawson\\NovaGenie\\NovaGenieServiceProvider"
-            ],
-            "aliases": {
-                "NovaGenie": "ElliottLawson\\NovaGenie\\Facades\\NovaGenie"
-            }
         }
     },
     "minimum-stability": "dev",
