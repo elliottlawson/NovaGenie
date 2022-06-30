@@ -6,7 +6,8 @@ class NovaGenie
 {
     public function __construct(
         protected $test,
-    ) {}
+    ) {
+    }
 
     public static function wish($test): static
     {

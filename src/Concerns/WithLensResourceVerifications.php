@@ -19,7 +19,7 @@ trait WithLensResourceVerifications
     {
         // This isn't very efficient
         // We should only have assertions for the items passed rather than for the universe of resources
-        $this->getAuthorizedLensResources()->each(function($expected) use ($lens) {
+        $this->getAuthorizedLensResources()->each(function ($expected) use ($lens) {
             $this->test::assertNotEquals(
                 static::getLensResourceProperties($expected),
                 static::getLensResourceProperties($lens),

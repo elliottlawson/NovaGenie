@@ -2,13 +2,13 @@
 
 namespace ElliottLawson\NovaGenie\Concerns;
 
-use Laravel\Illuminate\Model; // Needs refined
+// Needs refined
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 trait GeneratesNovaRequests
 {
     protected ?NovaRequest $novaRequest = null;
-    
+
     protected function getNovaRequest(): NovaRequest
     {
         return $this->novaRequest ??= $this->generateNovaRequest();
@@ -17,18 +17,18 @@ trait GeneratesNovaRequests
     protected function generateNovaRequest(): NovaRequest
     {
         $request = resolve(NovaRequest::class);
-        
+
         if (isset($this->user)) {
             $request->setUserResolver(fn () => $this->user);
         }
-        
+
         return $request;
     }
 
     protected function regenerateNovaRequest(): self
     {
         $this->novaRequest = $this->generateNovaRequest();
-        
+
         return $this;
     }
 

@@ -39,12 +39,12 @@ it('operates on menus', function () {
         ]);
 });
 
-it('operates on filters', function() {
+it('operates on filters', function () {
     $options = novaGenie()->getFilterOptions(CustomerNameFilter::class);
 
     novaGenie()
         ->usingFilter(CustomerNameFilter::class)
-        ->and(function() {
+        ->and(function () {
             Customer::factory()->count(10)->create();
         })
         ->on(Customer::query())
