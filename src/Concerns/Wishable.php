@@ -7,10 +7,10 @@ use Illuminate\Foundation\Testing\TestCase;
 trait Wishable
 {
     public function __construct(
-        protected TestCase $test,
+        protected $test,
     ) {}
 
-    public static function wish(TestCase $test): self
+    public static function wish($test): self
     {
         return new static($test);
     }
